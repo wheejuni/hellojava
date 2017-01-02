@@ -19,7 +19,7 @@ class billcalc{
 	
 	
 	for (int z=0;z<changebill.length;z++){
-		System.out.println(changebill[z]+"¿ø:"+geoseureum/changebill[z]+"°³");
+		System.out.println(changebill[z]+"ì›:"+geoseureum/changebill[z]+"ê°œ");
 		geoseureum=geoseureum%changebill[z];
 		
 		
@@ -62,18 +62,18 @@ public class geoseureum {
 		Scanner option=new Scanner(System.in);
 		
 		
-		System.out.println("´ç½ÅÀÌ ¾ó¸¶Â¥¸® ¹°°ÇÀ» ÆÈ¾Ò´Â°¡.");
+		System.out.println("ë‹¹ì‹ ì´ ì–¼ë§ˆì§œë¦¬ ë¬¼ê±´ì„ íŒ”ì•˜ëŠ”ê°€.");
 		eolma1=eolma.nextInt();
 		
-		System.out.println("¼Õ³ðÀÌ ÃÑ ¸îÀåÀÇ ÁöÆó¸¦ ÁöºÒÇß´Â°¡");
+		System.out.println("ì†ë†ˆì´ ì´ ëª‡ìž¥ì˜ ì§€íë¥¼ ì§€ë¶ˆí–ˆëŠ”ê°€");
 		jipyecount=count.nextInt();
 		
 		
 		int jipye1[]=new int[jipyecount];
 		
 		for (int n=0;n<jipyecount;n++){
-			System.out.println("¼Õ³ðÀÌ ¾î¶² ÁöÆó¸¦ ÁöºÒÇß´ÂÁö ÀÔ·ÂÇÏ¶ó. (ÁöÆó "+jipyecount+"Àå Áß "+(n+1)+"¹øÂ° Àå)");
-			System.out.println("1ºÎÅÍ 5 »çÀÌÀÇ Á¤¼ö·Î ÀÔ·ÂÇÏ¶ó. 1. 1000¿ø 2. 5000¿ø 3. 10000¿ø 4. 50000¿ø");
+			System.out.println("ì†ë†ˆì´ ì–´ë–¤ ì§€íë¥¼ ì§€ë¶ˆí–ˆëŠ”ì§€ ìž…ë ¥í•˜ë¼. (ì§€í "+jipyecount+"ìž¥ ì¤‘ "+(n+1)+"ë²ˆì§¸ ìž¥)");
+			System.out.println("1ë¶€í„° 5 ì‚¬ì´ì˜ ì •ìˆ˜ë¡œ ìž…ë ¥í•˜ë¼. 1. 1000ì› 2. 5000ì› 3. 10000ì› 4. 50000ì›");
 			jipyeoption=jipye.nextInt();
 				switch(jipyeoption){
 				
@@ -102,8 +102,8 @@ public class geoseureum {
 		}
 			
 		if (sum<eolma1){
-			System.out.println("´ç½ÅÀÌ ¹Þ¾Æ¾ßÇÒ µ·Àº "+eolma1+"ÀÎµ¥ ´ç½ÅÀÌ ½ÇÁ¦·Î ¹ÞÀº µ·Àº "+sum+"¿¡ ºÒ°úÇÏ´Ù.");
-			System.out.println("´ç½ÅÀº È£±¸ÀÎ°¡? ³ú´Â Äà¹° ¸¸µå´Â ±â°è°¡ ¾Æ´Ï´Ù.");
+			System.out.println("ë‹¹ì‹ ì´ ë°›ì•„ì•¼í•  ëˆì€ "+eolma1+"ì¸ë° ë‹¹ì‹ ì´ ì‹¤ì œë¡œ ë°›ì€ ëˆì€ "+sum+"ì— ë¶ˆê³¼í•˜ë‹¤.");
+			System.out.println("ë‹¹ì‹ ì€ í˜¸êµ¬ì¸ê°€?");
 			
 		}
 		
@@ -112,7 +112,7 @@ public class geoseureum {
 		result=finalcalc.calculation(sum, eolma1);
 		
 		if (sum<eolma1){
-			System.out.println("´ç½ÅÀÌ ´õ ¹Þ¾Æ¾ßÇÒ ±Ý¾×Àº "+Math.abs(result)+"¿øÀÌ´Ù.");
+			System.out.println("ë‹¹ì‹ ì´ ë” ë°›ì•„ì•¼í•  ê¸ˆì•¡ì€ "+Math.abs(result)+"ì›ì´ë‹¤.");
 		
 			
 			
@@ -120,10 +120,10 @@ public class geoseureum {
 		}
 		
 		else {
-			System.out.println("¼Õ³ðÀÌ ÁöºÒÇÑ ±Ý¾×ÀÇ ÇÕ°è´Â "+sum+"¿øÀÌ´Ù.");
-			System.out.println("´ç½ÅÀÌ °Å½½·¯Áà¾ßÇÒ ±Ý¾×Àº "+result+"¿øÀÌ´Ù.");
-			System.out.println("¸¸¾à ´ç½ÅÀÌ ³Ê¹«³ª ºý´ë°¡¸®¿©¼­ ¾ó¸¶ Â¥¸®¸¦ ¸î Àå °Å½½·¯Áà¾ßÇÏ´Â °Í ±îÁö °è»êÄÚÀÚ ÇÑ´Ù¸é,");
-			System.out.println("1À» ÀÔ·ÂÇÏ¶ó.");
+			System.out.println("ì†ë†ˆì´ ì§€ë¶ˆí•œ ê¸ˆì•¡ì˜ í•©ê³„ëŠ” "+sum+"ì›ì´ë‹¤.");
+			System.out.println("ë‹¹ì‹ ì´ ê±°ìŠ¬ëŸ¬ì¤˜ì•¼í•  ê¸ˆì•¡ì€ "+result+"ì›ì´ë‹¤.");
+			System.out.println("ë§Œì•½ ë‹¹ì‹ ì´ ì–¼ë§ˆ ì§œë¦¬ë¥¼ ëª‡ ìž¥ ê±°ìŠ¬ëŸ¬ì¤˜ì•¼í•˜ëŠ” ê²ƒ ê¹Œì§€ ê³„ì‚°ì½”ìž í•œë‹¤ë©´,");
+			System.out.println("1ì„ ìž…ë ¥í•˜ë¼.");
 			option1=option.nextInt();
 			
 		
@@ -138,7 +138,7 @@ public class geoseureum {
 		}
 		
 		else {
-			System.out.println("¸Ó¸®°¡ º¸±âº¸´Ù ÁÁ±¸¸¸");
+			System.out.println("ë¨¸ë¦¬ê°€ ë³´ê¸°ë³´ë‹¤ ì¢‹êµ¬ë§Œ");
 		}
 			
 		}
