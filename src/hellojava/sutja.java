@@ -3,12 +3,15 @@ import java.util.*;
 
 class randint{
 	
-	int createrandint(){
+	int createrandint(int b){
 	int a=0;
+	int range=0;
+	
 	Random random=new Random();
 	
+	range=b;
 	
-	a=random.nextInt(20);
+	a=random.nextInt(range);
 	
 	
 	return a;	
@@ -47,12 +50,19 @@ public class sutja {
 		int number=0;
 		int repeat=0;
 		int answer=0;
+		int range_choice=0;
+		
 		
 		Scanner answerinput=new Scanner(System.in);
+		Scanner rangeinput=new Scanner(System.in);
+		
 		
 		
 		randint createrandom=new randint();
-		number=createrandom.createrandint();
+		System.out.println("몇까지의 숫자를 고를지 입력하세요. 정수형만 지원");
+		
+		range_choice=rangeinput.nextInt();
+		number=createrandom.createrandint(range_choice);
 		
 		
 		chulje fetchquestion=new chulje();
@@ -70,7 +80,7 @@ public class sutja {
 			
 			if (i == repeat-1){
 				
-				System.out.println("ㅄ");
+				System.out.println("ㅄ. 답은 "+number+"였음.");
 				break;	
 				}
 					
