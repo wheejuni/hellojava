@@ -40,7 +40,7 @@ public class gpa {
 		}
 		
 		gpa=gradesum/subjectcount;
-		System.out.println("당신의 이번학기 전공 평점은 "+gpa+"입니다. ㅅㄱ");
+		System.out.println("당신의 이번학기 전공 평점은 "+gpa+"입니다. ㅅㄱ 이거 이렇게 바꾸면 커밋 되는거임?");
 		
 	}
 

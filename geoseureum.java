@@ -19,7 +19,7 @@ class billcalc{
 	
 	
 	for (int z=0;z<changebill.length;z++){
-		System.out.println(changebill[z]+"원:"+geoseureum/changebill[z]+"개");
+		System.out.println(changebill[z]+"�썝:"+geoseureum/changebill[z]+"媛�");
 		geoseureum=geoseureum%changebill[z];
 		
 		
@@ -62,17 +62,17 @@ public class geoseureum {
 		Scanner option=new Scanner(System.in);
 		
 		
-		System.out.println("당신이 얼마짜리 물건을 팔았는가.");
+		System.out.println("얼마를 받아야 합니까.");
 		eolma1=eolma.nextInt();
 		
-		System.out.println("손놈이 총 몇장의 지폐를 지불했는가");
+		System.out.println("손님이 돈을 몇 장 들이밀던가요?");
 		jipyecount=count.nextInt();
 		
 		
 		int jipye1[]=new int[jipyecount];
 		
 		for (int n=0;n<jipyecount;n++){
-			System.out.println("손놈이 어떤 지폐를 지불했는지 입력하라. (지폐 "+jipyecount+"장 중 "+(n+1)+"번째 장)");
+			System.out.println("손님이 낸 지폐를 입력하여 주십시오. (지폐 "+jipyecount+"장 중 "+(n+1)+"번째 장)");
 			System.out.println("1부터 5 사이의 정수로 입력하라. 1. 1000원 2. 5000원 3. 10000원 4. 50000원");
 			jipyeoption=jipye.nextInt();
 				switch(jipyeoption){
@@ -102,8 +102,8 @@ public class geoseureum {
 		}
 			
 		if (sum<eolma1){
-			System.out.println("당신이 받아야할 돈은 "+eolma1+"인데 당신이 실제로 받은 돈은 "+sum+"에 불과하다.");
-			System.out.println("당신은 호구인가?");
+			System.out.println("당신이 받아야할 돈은 "+eolma1+"인데 당신이 실제로 받은 돈은 "+sum+"에 불과하다.";
+			System.out.println("당신은 호구인가? 뇌는 콧물 만드는 기계가 아니다.");
 			
 		}
 		
@@ -122,7 +122,7 @@ public class geoseureum {
 		else {
 			System.out.println("손놈이 지불한 금액의 합계는 "+sum+"원이다.");
 			System.out.println("당신이 거슬러줘야할 금액은 "+result+"원이다.");
-			System.out.println("만약 당신이 얼마 짜리를 몇 장 거슬러줘야하는 것 까지 계산코자 한다면,");
+			System.out.println("만약 당신이 너무나 빡대가리여서 얼마 짜리를 몇 장 거슬러줘야하는 것 까지 계산코자 한다면,");
 			System.out.println("1을 입력하라.");
 			option1=option.nextInt();
 			
