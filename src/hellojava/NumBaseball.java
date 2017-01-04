@@ -80,27 +80,27 @@ public class NumBaseball {
 	
 	public static void main (String args[]){
 		
-		int [] experimental = new int [3];
-		int [] userex = new int [3];
+		int [] computer_ball = new int [3];
+		int [] user_ball = new int [3];
 		int strikecall=0;
 		
 		
 		makearray printcomputerball=new makearray();
-		experimental = printcomputerball.throwball();
+		computer_ball = printcomputerball.throwball();
 		
-		for(int p=0;p<experimental.length;p++){
-			System.out.println(experimental[p]);
+		for(int p=0;p<computer_ball.length;p++){
+			System.out.println(computer_ball[p]);
 		}
 		
 		userball printuserball=new userball();
-		userex = printuserball.userthrows();
+		user_ball = printuserball.userthrows();
 		
-		for(int q=0;q<userex.length;q++){
-			System.out.println(userex[q]);
+		for(int q=0;q<user_ball.length;q++){
+			System.out.println((q+1)+"¹øÂ° Åõ±¸´Â "+user_ball[q]);
 		}
 		
 		umpire ballpanjeong=new umpire();
-		strikecall = ballpanjeong.strike_ball(experimental, userex);
+		strikecall = ballpanjeong.strike_ball(computer_ball, user_ball);
 		if (strikecall == 3){
 			System.out.println("»ïÁø ¾Æ¿ô!");
 			
