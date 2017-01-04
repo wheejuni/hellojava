@@ -54,7 +54,7 @@ public class sutja {
 		randint createrandom=new randint();
 		number=createrandom.createrandint();
 		
-		System.out.println(number);
+		
 		chulje fetchquestion=new chulje();
 		repeat=fetchquestion.chance();
 		
