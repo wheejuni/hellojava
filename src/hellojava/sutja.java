@@ -72,7 +72,7 @@ public class sutja {
 			
 		
 			
-			System.out.println(repeat-i+"번의 기회가 남았습니다. 숫자를 맞혀보세요. 힌트: 20 이하임.");
+			System.out.println(repeat-i+"번의 기회가 남았습니다. 숫자를 맞혀보세요. 힌트: "+range_choice+" 이하임.");
 			answer=answerinput.nextInt();
 			if (answer == number){
 				System.out.println("당신은 천재입니다. "+(i+1)+"번만에 이걸 맞췄음. 개천재");
