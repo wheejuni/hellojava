@@ -41,8 +41,6 @@ class makearray{
 			}
 			
 		Arrays.sort(ballcontrol);
-		
-	
 		System.out.println(Arrays.toString(ballcontrol));
 		return ballcontrol;	
 	}
@@ -67,7 +65,7 @@ class userball{
 }
 
 class umpire{
-	int strike_ball(int []a, int []b){
+	int strike_count(int []a, int []b){
 		int strikecount = 0;
 		
 		int computerball[] = new int [3];
@@ -87,6 +85,21 @@ class umpire{
 		
 		return strikecount;
 	}
+	
+	int ball_count(int []a, int []b){
+		int ball_count=0;
+		
+		int computersball[] = new int [3];
+		int usersball[] = new int [3];
+		
+		computersball = a;
+		usersball = b;
+		
+		
+		return ball_count;
+		
+		
+	}
 }
 
 
@@ -97,7 +110,7 @@ public class NumBaseball {
 		int [] computer_ball = new int [3];
 		int [] user_ball = new int [3];
 		int strikecall=0;
-		
+		int ballcount=0;
 		
 		makearray printcomputerball=new makearray();
 		computer_ball = printcomputerball.throwball();
@@ -114,12 +127,12 @@ public class NumBaseball {
 		}
 		
 		umpire ballpanjeong=new umpire();
-		strikecall = ballpanjeong.strike_ball(computer_ball, user_ball);
+		strikecall = ballpanjeong.strike_count(computer_ball, user_ball);
 		if (strikecall == 3){
 			System.out.println("삼진 아웃!");
 			
 		}
-		else {System.out.println("스뚜라익! 현재 스트라익 카운트는 "+strikecall+" 입니다.");}
+		else {System.out.println("스뚜라익! 현재 "+strikecall+"S "+ballcount+"B 입니다.");}
 		
 	}
 
