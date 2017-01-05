@@ -148,7 +148,7 @@ public class NumBaseball {
 		
 		umpire ballpanjeong=new umpire();
 		int chance=0;
-		for (chance=0;chance<4;chance++){
+		while (chance<4){
 			
 		
 			strikecall = ballpanjeong.strike_count(computer_ball, user_ball);
@@ -158,19 +158,23 @@ public class NumBaseball {
 				break;
 				
 			}
-			else {System.out.println("스뚜라익! 현재 "+strikecall+"S "+ballcount+"B 입니다.");
+			else {System.out.println("스뚜라익! 현재 "+strikecall+"S "+ballcount+"B 입니다. ("+(chance+1)+"번째 타석)");
 			}
 			
 			user_ball = printuserball.userthrows();
 			
+			chance += 1;
+					
+			if (chance == 3){
+				System.out.println("다음 기회에.... 답은 "+Arrays.toString(computer_ball)+"이었습니다.");
+				break;
+			}
 			
 			
 			
 		}
 		
-		if (chance == 4){
-		System.out.println("볼넷을 허용하여 투수가 강판됩니다.");
-		}
+	
 		}
 			
 		}
