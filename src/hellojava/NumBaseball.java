@@ -28,7 +28,6 @@ class makearray{
 		
 		int ballcontrol[]=new int [3];
 		for (int i=0;i<ballcontrol.length;i++){
-			System.out.println(i);
 			ballcontrol[i] = randomize.nextInt(9);
 			
 			for (int j=0;j<i;j++){
@@ -41,7 +40,7 @@ class makearray{
 			}
 			
 		Arrays.sort(ballcontrol);
-		System.out.println(Arrays.toString(ballcontrol));
+		
 		return ballcontrol;	
 	}
 }
@@ -136,16 +135,17 @@ public class NumBaseball {
 		makearray printcomputerball=new makearray();
 		computer_ball = printcomputerball.throwball();
 		
-		System.out.println(Arrays.toString(computer_ball));
 		
 		
 		userball printuserball=new userball();
+		System.out.println("=============================================");
+		System.out.println("재미 있는 숫자 야구 게-임");
+		System.out.println("당신의 논증력과 추리력을 평가하겠다");
+		System.out.println("규칙: 당신이 알아맞힐 숫자는 0~9까지의 정수입니다.");
+		System.out.println("=============================================");
 		user_ball = printuserball.userthrows();
 		
-		for(int q=0;q<user_ball.length;q++){
-			System.out.println((q+1)+"번째 투구는 "+user_ball[q]);
-		}
-		
+	
 		umpire ballpanjeong=new umpire();
 		int chance=0;
 		while (chance<4){
@@ -158,7 +158,8 @@ public class NumBaseball {
 				break;
 				
 			}
-			else {System.out.println("스뚜라익! 현재 "+strikecall+"S "+ballcount+"B 입니다. ("+(chance+1)+"번째 타석)");
+			else {System.out.println("당신의 투구내용은 "+Arrays.toString(user_ball)+"입니다.");
+				System.out.println("스뚜라익! 현재 "+strikecall+"S "+ballcount+"B 입니다. ("+(chance+1)+"번째 타석)");
 			}
 			
 			user_ball = printuserball.userthrows();
