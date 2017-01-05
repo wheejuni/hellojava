@@ -28,8 +28,22 @@ class makearray{
 		
 		int ballcontrol[]=new int [3];
 		for (int i=0;i<ballcontrol.length;i++){
+			System.out.println(i);
 			ballcontrol[i] = randomize.nextInt(9);
-		}
+			
+			for (int j=0;j<i;j++){
+				if (ballcontrol[i] == ballcontrol[j]){
+					i = i -1;	
+				}
+				
+			}
+			
+			}
+			
+		Arrays.sort(ballcontrol);
+		
+	
+		System.out.println(Arrays.toString(ballcontrol));
 		return ballcontrol;	
 	}
 }
