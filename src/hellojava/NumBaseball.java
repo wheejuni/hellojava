@@ -102,17 +102,17 @@ class umpire{
 		
 		Arrays.sort(computersball);
 		
-		if (Arrays.binarySearch(computersball, userball1) >= 0){
+		if (Arrays.binarySearch(computersball, userball1) >= 0 && usersball[0] != computersball[0] ){
 			ball_count += 1;
 			
 		}
 		
-		if (Arrays.binarySearch(computersball, userball2) >= 0){
+		if (Arrays.binarySearch(computersball, userball2) >= 0 && usersball[1] != computersball[1]) {
 			ball_count += 1;
 			
 		}
 	
-		if (Arrays.binarySearch(computersball, userball3) >= 0){
+		if (Arrays.binarySearch(computersball, userball3) >= 0 && usersball[2] != computersball[2]){
 			ball_count += 1;
 			
 		}
@@ -136,9 +136,8 @@ public class NumBaseball {
 		makearray printcomputerball=new makearray();
 		computer_ball = printcomputerball.throwball();
 		
-		for(int p=0;p<computer_ball.length;p++){
-			System.out.println(computer_ball[p]);
-		}
+		System.out.println(Arrays.toString(computer_ball));
+		
 		
 		userball printuserball=new userball();
 		user_ball = printuserball.userthrows();
@@ -148,15 +147,33 @@ public class NumBaseball {
 		}
 		
 		umpire ballpanjeong=new umpire();
+		int chance=0;
+		for (chance=0;chance<4;chance++){
+			
 		
-		strikecall = ballpanjeong.strike_count(computer_ball, user_ball);
-		ballcount = ballpanjeong.ball_count(computer_ball, user_ball);
-		if (strikecall == 3){
-			System.out.println("삼진 아웃!");
+			strikecall = ballpanjeong.strike_count(computer_ball, user_ball);
+			ballcount = ballpanjeong.ball_count(computer_ball, user_ball);
+			if (strikecall == 3){
+				System.out.println("삼진 아웃!");
+				break;
+				
+			}
+			else {System.out.println("스뚜라익! 현재 "+strikecall+"S "+ballcount+"B 입니다.");
+			}
+			
+			user_ball = printuserball.userthrows();
+			
+			
+			
 			
 		}
-		else {System.out.println("스뚜라익! 현재 "+strikecall+"S "+ballcount+"B 입니다.");}
 		
-	}
+		if (chance == 4){
+		System.out.println("볼넷을 허용하여 투수가 강판됩니다.");
+		}
+		}
+			
+		}
+	
 
-}
+
