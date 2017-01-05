@@ -88,12 +88,21 @@ class umpire{
 	
 	int ball_count(int []a, int []b){
 		int ball_count=0;
+		int userball1; int userball2; int userball3;
+		int computerball1; int computerball2; int computerball3;
 		
 		int computersball[] = new int [3];
 		int usersball[] = new int [3];
 		
 		computersball = a;
 		usersball = b;
+		
+		userball1 = usersball[0]; userball2= usersball[1]; userball3= usersball[2];
+		computerball1 = computersball[0]; computerball2 = computersball[1]; computerball3 = computersball[2];
+		
+		Arrays.sort(computersball);
+		
+		Arrays.binarySearch(computersball, userball1);
 		
 		
 		return ball_count;
