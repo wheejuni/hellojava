@@ -56,6 +56,7 @@ class userball{
 			System.out.println((z+1)+"번째 공을 던지세요!");
 			userball[z] = makeinput.nextInt();			
 		}
+		System.out.println("당신의 투구내용은 "+Arrays.toString(userball)+"입니다.");
 		return userball;
 		
 		
@@ -158,7 +159,7 @@ public class NumBaseball {
 				break;
 				
 			}
-			else {System.out.println("당신의 투구내용은 "+Arrays.toString(user_ball)+"입니다.");
+			else {
 				System.out.println("스뚜라익! 현재 "+strikecall+"S "+ballcount+"B 입니다. ("+(chance+1)+"번째 타석)");
 			}
 			
