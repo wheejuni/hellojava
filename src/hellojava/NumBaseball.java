@@ -102,8 +102,20 @@ class umpire{
 		
 		Arrays.sort(computersball);
 		
-		Arrays.binarySearch(computersball, userball1);
+		if (Arrays.binarySearch(computersball, userball1) >= 0){
+			ball_count += 1;
+			
+		}
 		
+		if (Arrays.binarySearch(computersball, userball2) >= 0){
+			ball_count += 1;
+			
+		}
+	
+		if (Arrays.binarySearch(computersball, userball3) >= 0){
+			ball_count += 1;
+			
+		}
 		
 		return ball_count;
 		
@@ -136,7 +148,9 @@ public class NumBaseball {
 		}
 		
 		umpire ballpanjeong=new umpire();
+		
 		strikecall = ballpanjeong.strike_count(computer_ball, user_ball);
+		ballcount = ballpanjeong.ball_count(computer_ball, user_ball);
 		if (strikecall == 3){
 			System.out.println("»ïÁø ¾Æ¿ô!");
 			
