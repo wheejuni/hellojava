@@ -143,6 +143,7 @@ public class NumBaseball {
 		System.out.println("재미 있는 숫자 야구 게-임");
 		System.out.println("당신의 논증력과 추리력을 평가하겠다");
 		System.out.println("규칙: 당신이 알아맞힐 숫자는 0~9까지의 정수입니다.");
+		System.out.println("기회는 네번 뿐! 그 안에 답을 알아맞히지 못한다면 당신은...");
 		System.out.println("=============================================");
 		user_ball = printuserball.userthrows();
 		
@@ -179,7 +180,7 @@ public class NumBaseball {
 	
 		}
 			
-		}
+}
 	
 
 
