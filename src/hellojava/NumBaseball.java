@@ -40,7 +40,6 @@ class makearray{
 			}
 			
 		Arrays.sort(ballcontrol);
-		
 		return ballcontrol;	
 	}
 }
@@ -137,7 +136,7 @@ public class NumBaseball {
 		computer_ball = printcomputerball.throwball();
 		
 		
-		
+		System.out.println(Arrays.toString(computer_ball));
 		userball printuserball=new userball();
 		System.out.println("=============================================");
 		System.out.println("재미 있는 숫자 야구 게-임");
@@ -152,6 +151,11 @@ public class NumBaseball {
 		int chance=0;
 		while (chance<4){
 			
+			if (chance == 3){
+				System.out.println("다음 기회에.... 답은 "+Arrays.toString(computer_ball)+"이었습니다.");
+				break;
+			}
+
 		
 			strikecall = ballpanjeong.strike_count(computer_ball, user_ball);
 			ballcount = ballpanjeong.ball_count(computer_ball, user_ball);
@@ -168,11 +172,7 @@ public class NumBaseball {
 			
 			chance += 1;
 					
-			if (chance == 3){
-				System.out.println("다음 기회에.... 답은 "+Arrays.toString(computer_ball)+"이었습니다.");
-				break;
-			}
-			
+						
 			
 			
 		}
