@@ -151,11 +151,7 @@ public class NumBaseball {
 		int chance=0;
 		while (chance<4){
 			
-			if (chance == 3){
-				System.out.println("다음 기회에.... 답은 "+Arrays.toString(computer_ball)+"이었습니다.");
-				break;
-			}
-
+			
 		
 			strikecall = ballpanjeong.strike_count(computer_ball, user_ball);
 			ballcount = ballpanjeong.ball_count(computer_ball, user_ball);
@@ -166,6 +162,16 @@ public class NumBaseball {
 			}
 			else {
 				System.out.println("스뚜라익! 현재 "+strikecall+"S "+ballcount+"B 입니다. ("+(chance+1)+"번째 타석)");
+			}
+			
+			if (chance == 3){
+				if (strikecall != 3){
+				System.out.println("다음 기회에.... 답은 "+Arrays.toString(computer_ball)+"이었습니다.");
+				break;
+			}
+				else { System.out.println("삼진 아웃!");
+				break;
+				}
 			}
 			
 			user_ball = printuserball.userthrows();
