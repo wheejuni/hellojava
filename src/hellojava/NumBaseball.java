@@ -161,7 +161,10 @@ public class NumBaseball {
 				
 			}
 			else {
-				System.out.println("스뚜라익! 현재 "+strikecall+"S "+ballcount+"B 입니다. ("+(chance+1)+"번째 타석)");
+				if (chance != 3){
+				System.out.println("스뚜라익! 현재 "+strikecall+"S "+ballcount+"B 입니다. ("+(chance+1)+"번째 타석)");}
+				
+				 
 			}
 			
 			if (chance == 3){
