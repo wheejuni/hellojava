@@ -18,22 +18,23 @@ public class Theater {
 	}
 	
 	public void TheaterInit(){
-		Seat seatinit = new Seat();
-		seatinit.setName("null");
 		seats= new Seat [rowCount][colCount];
 		for (int i = 0;i < rowCount; i++){
 			for (int j = 0;j < colCount; j++){
-				seats[i][j] = seatinit;
+				newseat = new Seat();
+				newseat.setName("null");
+				seats[i][j] = newseat;
 			}
 		}
 	}
 	
 	public String reserve(){
-		Seat reserveSeat = new Seat();
 		String name;
 		String rowString;
 		String failMessage1 = "예약하는 좌석이 없습니다.";
 		String failMessage2 = "이미 예약된 좌석입니다.";
+		String failMessage3 = "입력하신 행은 없는 행입니다.";
+		String failMessage4 = "입력하신 열은 없는 열입니다.";
 		String successMessage = "예약에 성공하였습니다.";
 		int colInput; 
 		int actualCol = 0;
@@ -73,13 +74,15 @@ public class Theater {
 		seatRangeTester = actualCol + actualIndexCount;
 		seatRowTester = actualRow + 1;
 		
-		System.out.println("입력받은 좌석: " + rowString.toUpperCase()+ "행" + colInput + "열");
-		if (seatRangeTester > (colCount - 1) || seatRowTester > rowCount) {return failMessage1;}
+		System.out.println("입력받은 좌석: " + rowString.toUpperCase()+ "행" + colInput + "열 부터 " + seatCount + "개 좌석");
+		if (seatRangeTester > (colCount - 1)) return failMessage4;
+		else if (seatRowTester > rowCount) return failMessage3;
 		else 
 			for (int i = actualCol; i < actualIndexCount + savedActualCol + 1; i++){
 				if(seats[actualRow][i].isOccupied()) return failMessage2;
-				else {seats[actualRow][i] = reserveSeat;}}
-		reserveSeat.setName(name);
+				else {seats[actualRow][i].setName(name);}
+				}
+		
 		return successMessage;
 			}
 	
@@ -87,7 +90,6 @@ public class Theater {
 	public void view(){
 		String rowString;
 		int count = 0;
-		boolean repeatSwitch;
 		for (int i = 0;i < rowCount; i++){
 			for (int j = 0;j < colCount; j++){
 				if (seats[i][j].getName() != "null"){
@@ -120,17 +122,13 @@ public class Theater {
 	}
 	public void cancel(){
 		String cancelResvName = "null";
-		String targetName = "null";
-		Seat cancelSeat = new Seat();
-		cancelSeat.setName("null");
 		System.out.println("취소하실 분의 성명 입력: "); 
 		cancelResvName = scanf.next();
 		System.out.println("입력된 이름은 " + cancelResvName);
 		for (int i = 0;i < rowCount; i++){
 			for (int j = 0;j < colCount; j++){ 
-				if (seats[i][j].getName().equals(cancelResvName)){
-					seats[i][j] = cancelSeat;
-				}
+				if (seats[i][j].match(cancelResvName))
+					seats[i][j].cancel();
 				
 				}
 		}

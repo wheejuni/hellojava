@@ -2,8 +2,6 @@ package hellojava;
 import java.util.*;
 public class Driver {
 	static Scanner scanner = new Scanner(System.in);
-	Theater theaterCall = new Theater(3, 3, scanner);
-	
 	public static void main (String args[]){
 		String optionChoice;
 		

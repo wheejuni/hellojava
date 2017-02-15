@@ -2,7 +2,6 @@ package hellojava;
 
 public class Seat {
 	private String name = "null";
-	Theater theaterCall;
 	
 	public void setName(String name){
 		this.name = name;
@@ -21,9 +20,10 @@ public class Seat {
 		return false;
 	}
 	public boolean match(String checkName){
-		if (this.name == checkName)
+		if (this.name.equals(checkName))
 			return true;
-		return false;
+		else 
+			return false;
 	}
 	
 }
