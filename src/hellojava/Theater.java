@@ -10,22 +10,16 @@ public class Theater {
 	static private Seat seats[][];
 	
 	
+	public Theater(){}
 	public Theater (int rowCount, int colCount, Scanner scanner){
 		
-		this.rowCount = rowCount;
-		this.colCount = colCount;
-		scanf = scanner;
-	}
-	
-	public void TheaterInit(){
 		seats= new Seat [rowCount][colCount];
 		for (int i = 0;i < rowCount; i++){
 			for (int j = 0;j < colCount; j++){
-				newseat = new Seat();
-				newseat.setName("null");
-				seats[i][j] = newseat;
-			}
-		}
+				seats[i][j] = new Seat();}}
+		this.rowCount = rowCount;
+		this.colCount = colCount;
+		scanf = scanner;
 	}
 	
 	public String reserve(){
@@ -92,7 +86,7 @@ public class Theater {
 		int count = 0;
 		for (int i = 0;i < rowCount; i++){
 			for (int j = 0;j < colCount; j++){
-				if (seats[i][j].getName() != "null"){
+				if (seats[i][j].getName() != null){
 					switch(i){
 					case 0:
 						rowString = "A";
@@ -121,13 +115,13 @@ public class Theater {
 		
 	}
 	public void cancel(){
-		String cancelResvName = "null";
+		String cancelResvName;
 		System.out.println("취소하실 분의 성명 입력: "); 
 		cancelResvName = scanf.next();
 		System.out.println("입력된 이름은 " + cancelResvName);
 		for (int i = 0;i < rowCount; i++){
 			for (int j = 0;j < colCount; j++){ 
-				if (seats[i][j].match(cancelResvName))
+				if (seats[i][j].getName() != null && seats[i][j].match(cancelResvName))
 					seats[i][j].cancel();
 				
 				}
@@ -197,4 +191,3 @@ public class Theater {
 		
 		
 	}
-

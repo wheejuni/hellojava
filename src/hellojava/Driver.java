@@ -2,13 +2,16 @@ package hellojava;
 import java.util.*;
 public class Driver {
 	static Scanner scanner = new Scanner(System.in);
+	
+	static public int row = 5;
+	static public int col = 9;
+	
 	public static void main (String args[]){
 		String optionChoice;
+		boolean repeatSwitch = true;
+		Theater heytheater = new Theater(row, col, scanner);
 		
-		Theater heytheater = new Theater(5, 9, scanner);
-		heytheater.TheaterInit();
-		
-		while(true){
+		while(repeatSwitch){
 			
 		heytheater.showMap();
 		System.out.println();
@@ -30,7 +33,9 @@ public class Driver {
 			break;
 		case "q":
 			System.out.println("프로그램을 종료합니다.");
-			System.exit(0);
+			repeatSwitch = false;
+			break;
+			
 		
 		}
 		}

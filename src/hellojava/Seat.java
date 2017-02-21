@@ -1,7 +1,7 @@
 package hellojava;
 
 public class Seat {
-	private String name = "null";
+	private String name = null;
 	
 	public void setName(String name){
 		this.name = name;
@@ -12,19 +12,16 @@ public class Seat {
 	}
 	
 	public void cancel(){
-		this.setName("null");
+		this.setName(null);
 	}
 	
 	public boolean isOccupied(){
-		if (this.name != "null") return true;
+		if (this.name != null) return true;
 		return false;
 	}
 	public boolean match(String checkName){
-		if (this.name.equals(checkName))
-			return true;
-		else 
-			return false;
+		if (this.name.equals(checkName)) return true;
+		return false;
 	}
-	
 }
 
