@@ -8,10 +8,10 @@ public class Course {
 	static String CREDIT_GENERAL = "general";
 	static String CREDIT_MAJOR = "major";
 	
-	public Course(String a, String b, String c){
-		this.name = a;
-		this.courseGroup = b;
-		this.grade = c;
+	public Course(String name, String course, String grade){
+		this.name = name;
+		this.courseGroup = course;
+		this.grade = grade;
 	}
 	
 	String getName(){

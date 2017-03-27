@@ -59,6 +59,7 @@ import java.util.*;
 					case "C+":
 						gpaTemp = 2.5;
 						break;
+					//C+ 아래는 2.0으로 처리.
 					default:
 						gpaTemp = 2.0;
 						break;
