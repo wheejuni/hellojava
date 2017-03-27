@@ -25,15 +25,18 @@ public class UnitConverter {
 	    }
 
 	    public static double toInches(double centimeters) {
-	        return centimeters * 0.393701;
+	        return centimeters * INCHES_PER_CENTIMETER;
 	    }
 
 	    public static double toFahrenheit(double celsius) {
-	        return celsius * (9 / 5) + 32;
+	        double temp = celsius * (9.0 / 5.0);
+	    	return temp + 32;
 	    }
 
 	    public static double toCelsius(double fahrenheit) {
-	        return (fahrenheit - 32) * (5 / 9); 
+	    	double temp = fahrenheit - 32;
+	    	double multiplier = 5.0 / 9.0;
+	        return temp * multiplier; 
 	    }
 
 }
