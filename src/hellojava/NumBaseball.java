@@ -148,7 +148,7 @@ public class NumBaseball {
 		
 	
 		umpire ballpanjeong=new umpire();
-		int chance=0;
+		int chance = 0;
 		while (chance<4){
 			
 			
